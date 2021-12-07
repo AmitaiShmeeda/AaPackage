@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AaPackage</string>
+    <string name="welcome_to_n_aapackage">Welcome to AaPackage</string>
+    <string name="todo">TODO</string>
+</resources>
