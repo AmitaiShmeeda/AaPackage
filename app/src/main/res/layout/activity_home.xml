@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    >
 
     <TableLayout
         android:id="@+id/table_heading_layout"
@@ -18,50 +18,53 @@
         <TableRow>
 
             <TextView
-                style="@style/CardView.Dark"
-                android:layout_width="0dp"
-
+                android:text="Package Details"
+                android:textSize="40sp"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
                 android:layout_column="0"
-                android:layout_weight="1"
-                android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
                 android:gravity="center"
-                />
+                android:textAlignment="center"
+                style="@style/CardView.Dark"/>
 
+        </TableRow>
+        <TableRow>
             <TextView
-
-                android:layout_width="0dp"
+                android:text="Package Name:"
                 android:layout_column="1"
                 android:layout_weight="1"
-                android:text="@string/package_name"
-                style="@style/CardView.Light"
-
-                android:textAlignment="center"
                 android:layout_gravity="center_horizontal"
-                android:gravity="center"/>
+                android:gravity="left"
+                style="@style/GreenText"/>
 
             <TextView
-                android:layout_width="0dp"
+
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:gravity="right"
+                style="@style/GreenText"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+
                 android:layout_column="2"
                 android:layout_weight="1"
-                style="@style/GreenText"
+                android:gravity="left"
+                android:text="Package Name:"
+                style="@style/GreenText"/>
 
-                android:textAlignment="center"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"/>
+            <TextView
+
+                android:layout_column="2"
+                android:layout_weight="1"
+                android:gravity="right"
+                style="@style/GreenText"/>
         </TableRow>
+
     </TableLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/table_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/table_heading_layout">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
