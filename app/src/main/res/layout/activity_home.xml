@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="8"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/table_heading_layout"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:stretchColumns="1,2,3,4,5"
     >
 
-    <TableLayout
-        android:id="@+id/table_heading_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TableRow>
+        <TableRow
+            android:stretchColumns="1" >
 
             <TextView
                 android:text="Package Details"
@@ -24,47 +20,61 @@
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_gravity="center_horizontal"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:gravity="center"
                 android:textAlignment="center"
-                style="@style/CardView.Dark"/>
+                android:textColor="@color/black"/>
 
         </TableRow>
-        <TableRow>
+
+        <TableRow
+            android:stretchColumns="2">
+
             <TextView
-                android:text="Package Name:"
-                android:layout_column="1"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal"
                 android:gravity="left"
-                style="@style/GreenText"/>
+                android:text="@string/package_name"
+                android:textColor="@color/purple"/>
+
+            <TextView
+                android:gravity="right"/>
+
+                //android:layout_width="wrap_content"
+
+        </TableRow>
+
+        <TableRow
+            android:stretchColumns="3">
+
+            <TextView
+
+                android:layout_column="0"
+                android:gravity="left"
+                android:text="@string/fragile"
+                android:textColor="@color/purple"/>
 
             <TextView
 
                 android:layout_column="1"
-                android:layout_weight="1"
                 android:gravity="right"
                 style="@style/GreenText"/>
         </TableRow>
 
-        <TableRow>
+    <TableRow
+        android:stretchColumns="4">
 
-            <TextView
+        <TextView
 
-                android:layout_column="2"
-                android:layout_weight="1"
-                android:gravity="left"
-                android:text="Package Name:"
-                style="@style/GreenText"/>
+            android:layout_column="0"
+            android:gravity="left"
+            android:text="@string/Package_weight"
+            android:textColor="@color/purple"/>
 
-            <TextView
+        <TextView
 
-                android:layout_column="2"
-                android:layout_weight="1"
-                android:gravity="right"
-                style="@style/GreenText"/>
-        </TableRow>
+            android:layout_column="1"
+            android:gravity="right"
+            style="@style/GreenText"/>
+    </TableRow>
 
     </TableLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
