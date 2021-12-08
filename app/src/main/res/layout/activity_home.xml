@@ -6,17 +6,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/table_heading_layout"
     app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:stretchColumns="1,2,3,4,5"
-    >
+    app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
             android:stretchColumns="1" >
 
             <TextView
-                android:text="Package Details"
+                android:text="@string/package_details"
                 android:textSize="40sp"
-                android:layout_width="40dp"
+                android:layout_width="40sp"
                 android:layout_height="wrap_content"
                 android:layout_column="0"
                 android:layout_gravity="center_horizontal"
@@ -27,18 +25,24 @@
 
         </TableRow>
 
+
+
+
         <TableRow
             android:stretchColumns="2">
 
             <TextView
-                android:gravity="left"
-                android:text="@string/package_name"
-                android:textColor="@color/purple"/>
+
+                android:text="@string/package_type"
+                android:textSize="25sp"
+                android:textColor="@color/purple"
+                 />
 
             <TextView
-                android:gravity="right"/>
+                android:foregroundGravity="right"
+                />
 
-                //android:layout_width="wrap_content"
+
 
         </TableRow>
 
@@ -48,14 +52,15 @@
             <TextView
 
                 android:layout_column="0"
-                android:gravity="left"
+
                 android:text="@string/fragile"
+                android:textSize="25sp"
                 android:textColor="@color/purple"/>
 
             <TextView
 
                 android:layout_column="1"
-                android:gravity="right"
+
                 style="@style/GreenText"/>
         </TableRow>
 
@@ -65,14 +70,14 @@
         <TextView
 
             android:layout_column="0"
-            android:gravity="left"
+
             android:text="@string/Package_weight"
+            android:textSize="25sp"
             android:textColor="@color/purple"/>
 
         <TextView
 
             android:layout_column="1"
-            android:gravity="right"
             style="@style/GreenText"/>
     </TableRow>
 

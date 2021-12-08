@@ -10,11 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AaPackage">
         <activity
-            android:name=".splashActivity.HomeActivity"
             android:label="Home"
-            android:exported="false" />
+            android:exported="false"
+            android:name="com.example.aapackage.HomeActivity"
+            />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.aapackage.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

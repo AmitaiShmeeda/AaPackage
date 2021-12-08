@@ -1,4 +1,4 @@
-package com.example.aapackage.model
+package AaPackage.model
 
 data class Package (
 
